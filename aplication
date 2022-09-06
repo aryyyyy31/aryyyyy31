@@ -1,0 +1,136 @@
+print("----------------- Beli Dong -----------------")
+pembeli = input("Masukkan nama Pembeli: ")
+print ("Nama Pembeli :", pembeli) 
+
+def fungsimakanan():
+   global totalmkn
+   global porsi
+   global mkn
+   print ("\n----------------- Menu Makanan -----------------")
+   print("1. Nasi Goreng   - Rp 15000")
+   print("2. Soto          - Rp 9000")
+   print("3. Mie Ayam      - Rp 11000")
+   print("4. Mie Goreng    - Rp 15000")
+   print("5. Ayam Bakar    - Rp 18000")
+   print("6. Bubur Ayam    - Rp 8000")
+   print("7. Kebab         - Rp 12000")
+   print("8. Burger        - Rp 10000")
+   print("9. Almas Caviar  - Rp 982000")
+   nomor=int(input("Masukan Pilihan: "))
+   porsi= int(input("Berapa Porsi: "))
+   
+   if nomor==1:
+       totalmkn=porsi*15000
+       print (porsi," porsi Nasi Goreng Telur = Rp", totalmkn)
+       mkn=("Nasi Goreng")
+   elif nomor==2:
+       totalmkn=porsi*9000
+       print (porsi," porsi Soto = Rp", totalmkn)
+       mkn=("Soto")
+   elif nomor==3:
+       totalmkn=porsi*11000
+       print (porsi, " porsi Mie Ayam = Rp", totalmkn)
+       mkn=("Mie Ayam")
+   elif nomor==4:
+       totalmkn=porsi*15000
+       print (porsi, " porsi Mie Goreng = Rp", totalmkn)
+       mkn=("Mie Goreng")
+   elif nomor==5:
+       totalmkn=porsi*18000
+       print (porsi, " porsi Ayam Bakar = Rp", totalmkn)
+       mkn=("Ayam Bakar")
+   elif nomor==6:
+       totalmkn=porsi*8000
+       print (porsi, " porsi Bubur Ayam = Rp", totalmkn)
+       mkn=("Bubur Ayam")
+   elif nomor==7:
+       totalmkn=porsi*12000
+       print (porsi, " Kebab = Rp", totalmkn)
+       mkn=("Kebab")
+   elif nomor==8:
+       totalmkn=porsi*10000
+       print (porsi, " Burger = Rp", totalmkn)
+       mkn=("Burger")
+   elif nomor==9:
+       totalmkn=porsi*16.625000
+       print (porsi, " Almas Caviar = Rp", totalmkn)
+       mkn=("Almas Caviar")
+   else:
+      print("Pilihan tidak ada, silahkan masukan lagi!!")
+      fungsimakanan()
+
+def fungsiminuman():
+   global totalmnm
+   global mnm
+   global gelas
+   print("\n----------------- Menu Minuman -----------------")
+   print("1. Es teh - Rp 2000")
+   print("2. Es jeruk - Rp 3500")
+   print("3. Es kopi - Rp 4000")
+   print("4. Kopi Kenangan - Rp 27000")
+   print("5. Soda Gembira - Rp 17000")
+   print("6. Jus Alpukat - Rp 11000")
+   print("7. Jus Mangga - Rp 12000")
+   print("8. Milo Choco - Rp 16000")
+   nomor=int(input("Masukan Pilihan: "))
+   gelas= int(input("Berapa Gelas: "))
+
+   if nomor==1:
+       totalmnm=gelas*2000
+       print (gelas," Es Teh = Rp", totalmnm)
+       mnm=(" Gelas Es Teh")
+   elif nomor==2:
+       totalmnm=gelas*3500
+       print (gelas, " Gelas Es Jeruk = Rp", totalmnm)
+       mnm=("Es Jeruk")
+   elif nomor==3:
+       totalmnm=gelas*4000
+       print (gelas, " Gelas Es Kopi = Rp", totalmnm)
+       mnm=("Es Kopi")
+   elif nomor==4:
+       totalmnm=gelas*27000
+       print (gelas, " Gelas Kopi Kenangan = Rp", totalmnm)
+       mnm=("Kopi Kenangan")
+   elif nomor==5:
+       totalmnm=gelas*17000
+       print (gelas, " Gelas Soda Gembira = Rp", totalmnm)
+       mnm=("Soda Gembira")
+   elif nomor==6:
+       totalmnm=gelas*11000
+       print (gelas, " Gelas Jus Alpukat = Rp", totalmnm)
+       mnm=("Jus Alpukat")
+   elif nomor==7:
+       totalmnm=gelas*12000
+       print (gelas, " Gelas Jus Mangga = Rp", totalmnm)
+       mnm=("Jus Mangga")
+   elif nomor==8:
+       totalmnm=gelas*16000
+       print (gelas, " Gelas Milo Choco = Rp", totalmnm)
+       mnm=("Milo Choco")
+   else:
+      print("Pilihan tidak ada, silahkan masukan lagi!!")
+      fungsiminuman()
+
+fungsimakanan()
+fungsiminuman()
+totalsemua=totalmkn+totalmnm
+
+print("\nTotal harus Dibayar: Rp",totalsemua)
+uang=int(input("Uang Tunai Pembeli: Rp "))
+kembalian=int(uang-totalsemua)
+print("Kembalian :",kembalian)
+
+print("\n==================================")
+print("========== S T R U K   B E L I =========")
+print("==================================")
+print ("Nama\t\t:",pembeli)
+print ("Beli\t\t:",porsi,mkn,"( Rp", totalmkn,")")
+print ("\t\t ",gelas,mnm,"( Rp", totalmnm,")")
+print ("Tagihan\t\t: Rp",totalsemua)
+print ("Dibayar\t\t: Rp",uang)
+print ("Kembalian\t: Rp",kembalian)
+print("==================================")
+print("==================================")
+
+
+by.Arya.AR_31
